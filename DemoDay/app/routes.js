@@ -1,20 +1,32 @@
+var express = require('express');
+var app = express();app.set('view engine', 'ejs');
 module.exports = function(app, passport, db) {
 
 //main page routes
 //dont want to require signup to use site
   app.get( "/", function(req, res){
-    res.render("index.ejs");
+    db.collection("stats").find().toArray((err, result) => {
+      if (err) return console.log(err)
+      res.render("index.ejs", {
+        stats: result
+      })
+    })
   });
 
-  app.get("/info", isLogged, function(req, res) {
+  app.get("/info", function(req, res) {
     db.collection("userInfo").find().toArray((err, result) => {
       if (err) return console.log(err)
       res.render("login.ejs")
     })
   });
 
-  app.get("/science", function(req, res) {
-    res.render("sci.ejs");
+  app.get( "/sci", function(req, res){
+    db.collection("stats").find().toArray((err, result) => {
+      if (err) return console.log(err)
+      res.render("sci.ejs", {
+        stats: result
+      })
+    })
   });
 
   app.post("/comments", (req, res) => {
@@ -27,6 +39,7 @@ module.exports = function(app, passport, db) {
   })
 
   app.get("/tech", function(req, res) {
+    console.log(req, res);
     res.render("tech.ejs");
   });
 
@@ -35,7 +48,7 @@ module.exports = function(app, passport, db) {
   });
 
   app.get("/math", function(req, res) {
-    res.render("views/math.ejs");
+    res.render("math.ejs");
   });
 
 

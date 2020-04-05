@@ -76,14 +76,12 @@ a:hover{
 	-webkit-text-fill-color: transparent;
 }
 section{
-	width:50%;
-	height: 800px;
 	background: -webkit-linear-gradient(right,red, purple);
-	border-radius: 10px;
+	/* border-radius: 10px; */
 }
-p{
+/* p{
 	color: black;
 	font-size: 1.5em;
 	line-height: 1.5;
 	padding-top: 50px;
-}
+} */
