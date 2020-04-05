@@ -2,6 +2,7 @@
 var vote = document.getElementsByClassName("fa-check");
 var trash = document.getElementsByClassName("fa-trash");
 
+
 Array.from(vote).forEach(function(element) {
       element.addEventListener('click', function(){
         const name = this.parentNode.parentNode.childNodes[1].innerText
