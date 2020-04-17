@@ -52,11 +52,17 @@ table {
 body{
 	background-color: black;
 }
+.struct{
+	font-size: 1.5em;
+	color: black;
+	background: -webkit-linear-gradient(right,red, purple);
+}
 h1{
+	/* background-color: black; */
 	background: -webkit-linear-gradient(right,red, purple);
   -webkit-background-clip:text;
   -webkit-text-fill-color: transparent;
-	font-size: 5em;
+	font-size: 3em;
 	font-family: sans-serif;
 	font-weight: bold;
 }
@@ -71,19 +77,14 @@ a{
 }
 a:hover{
 	text-decoration: underline;
-	background: -webkit-linear-gradient(left,purple, blue);
+	background: -webkit-linear-gradient(left,purple, red);
 	-webkit-background-clip:text;
 	-webkit-text-fill-color: transparent;
 }
-section{
-	width:50%;
-	height: 800px;
-	background: -webkit-linear-gradient(right,red, purple);
-	border-radius: 10px;
-}
-p{
+
+/* p{
 	color: black;
 	font-size: 1.5em;
 	line-height: 1.5;
 	padding-top: 50px;
-}
+} */

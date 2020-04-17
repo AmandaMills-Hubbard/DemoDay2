@@ -21,6 +21,7 @@
     "passport-google-oauth": "~1.0.0",
     "passport-local": "~1.0.0",
     "passport-twitter": "~1.0.4",
-    "sudo": "^1.0.3"
+    "sudo": "^1.0.3",
+    "three": "^0.115.0"
   }
 }
